@@ -25,17 +25,12 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('✅ Connected to MongoDB');
+    console.log('✅ Connected to MongoDB Atlas');
   } catch (err) {
     console.error('❌ MongoDB connection error:', err.message);
-    console.log('💡 MongoDB is not installed or not running');
-    console.log('💡 Please install MongoDB or use MongoDB Atlas');
-    console.log('💡 For now, the server will start but database operations will fail');
-    console.log('💡 To install MongoDB: https://docs.mongodb.com/manual/installation/');
-    console.log('💡 Or use MongoDB Atlas: https://www.mongodb.com/cloud/atlas');
-    
-    // Don't exit, let the server start for testing
-    // process.exit(1);
+    console.log('💡 Please check your MongoDB Atlas connection string');
+    console.log('💡 Make sure your IP is whitelisted in MongoDB Atlas');
+    process.exit(1);
   }
 };
 

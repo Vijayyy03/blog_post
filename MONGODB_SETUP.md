@@ -43,7 +43,7 @@ sudo systemctl enable mongod
 5. Update the `.env` file in the server directory:
 
 ```env
-MONGODB_URI= Paste Your URL
+MONGODB_URI= MONGODB_URI=mongodb+srv://VijayJagdale:vijay10032003@cluster0.yw2pyek.mongodb.net/omnify-blog?retryWrites=true&w=majority&appName=Cluster0
 ```
 
 ## Option 3: Use Docker (Recommended for Development)
